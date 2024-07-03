@@ -211,4 +211,54 @@ def nStarTriangle(n: int) -> None:
             print("*",end="")
         print()
         
+def nBinaryTriangle(n: int) -> None:
+    """
+    Prints a pattern of binary numbers (0s and 1s) in a right-angled triangle shape. 
+    The pattern alternates between 0s and 1s in each row, starting with 1 in the first row.
 
+    Parameters:
+    n (int): The number of rows in the pattern. 
+
+    Returns:
+    None. The function prints the pattern directly.
+
+    Example:
+    >>> nBinaryTriangle(4)
+    1 
+    0 1 
+    1 0 1 
+    0 1 0 1
+    """
+    start = 1  # Initialize the starting binary number
+    for i in range(n):  # Loop through each row
+        if i % 2 == 0:  # If the row number is even, start with 1
+            start = 1
+        else:  # If the row number is odd, start with 0
+            start = 0
+        for j in range(i+1):  # Loop through each column in the row
+            print(start, end=" ")  # Print the current binary number
+            start = 1 - start  # Alternate between 0 and 1
+        print()  # Move to the next line
+
+def nLetterTriangle(n: int) -> None:
+    """
+    Prints a pattern of letters in a right-angled triangle shape. 
+    The pattern starts with the letter 'A' in the first row and continues with the next letter in the alphabet for each subsequent row.
+
+    Parameters:
+    n (int): The number of rows in the pattern. 
+
+    Returns:
+    None. The function prints the pattern directly.
+
+    Example:
+    >>> nLetterTriangle(4)
+    A 
+    A B 
+    A B C 
+    A B C D
+    """
+    for i in range(n):  # Loop through each row
+        for j in range(i+1):  # Loop through each column in the row
+            print(chr(65+j),end=" ")  # Print the current letter using ASCII value
+        print()  # Move to the next line
