@@ -201,3 +201,14 @@ def nStarDiamond(n: int) -> None:
         for l in range(j):
             print(" ",end="")
         print()
+
+def nStarTriangle(n: int) -> None:
+    for i in range(1,(2*n)):
+        start = i;
+        if i > n:
+            start = 2*n-i
+        for j in range(start):
+            print("*",end="")
+        print()
+        
+
