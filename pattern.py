@@ -120,3 +120,10 @@ def seeding(n: int) -> None:
         for j in range(n,i-1,-1):  # Loop through each column in the row, starting from n and decrementing by 1
             print("*",end=" ")  # Print a star
         print()  # Move to the next line
+
+def nNumberTriangle(n: int) -> None:
+    for i in range(1,n+1):
+        for j in range(1,(n+2)-i):
+            print(j,end=" ")
+        print()
+            
