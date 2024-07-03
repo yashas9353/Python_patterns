@@ -128,11 +128,76 @@ def nNumberTriangle(n: int) -> None:
         print()
             
 def nStarTriangle(n: int) -> None:
+    """
+    Prints a pattern of stars in a right-angled triangle shape. The number of stars in each row decreases by 2, starting from 2n-1 in the first row.
+
+    Parameters:
+    n (int): The number of rows in the pattern. The number of stars in the first row is equal to 2n-1, and it decreases by 2 for each subsequent row.
+
+    Returns:
+    None. The function prints the pattern directly.
+
+    Example:
+    >>> nStarTriangle(4)
+        *
+       ***
+      *****
+     *******
+    """
+    for i in range(n):  # Loop through each row
+        for j in range(i):  # Loop through each space before the stars in the row
+            print(" ", end="")
+        for k in range((n*2)-(2*i)-1):  # Loop through each star in the row
+            print("*", end="")
+        for l in range(i):  # Loop through each space after the stars in the row
+            print(" ", end="")
+        print()  # Move to the next line
+
+
+def nStarDiamond(n: int) -> None:
+    """
+    Prints a pattern of stars in a diamond shape. The number of stars in each row increases by 2, starting from 1 in the middle row.
+
+    Parameters:
+    n (int): The number of rows in the upper half of the diamond. The number of rows in the lower half will be n-1.
+
+    Returns:
+    None. The function prints the pattern directly.
+
+    Example:
+    >>> nStarDiamond(4)
+        *
+       ***
+      *****
+     *******
+    *********
+     *******
+      *****
+       ***
+        *
+    """
+    # Print the upper half of the diamond
     for i in range(n):
-        for j in range(i):
+        # Print spaces before the stars
+        for j in range(n-i-1):
             print(" ",end="")
-        for k in range((n*2)-(2*i)-1):
+        # Print stars
+        for k in range(2*i+1):
             print("*",end="")
-        for l in range(i):
+        # Print spaces after the stars
+        for l in range(n-i-1):
+            print(" ",end="")
+        print()
+    
+    # Print the lower half of the diamond
+    for j in range(n):
+        # Print spaces before the stars
+        for i in range(j):
+            print(" ",end="")
+        # Print stars
+        for k in range((n*2)-(2*j)-1):
+            print("*",end="")
+        # Print spaces after the stars
+        for l in range(j):
             print(" ",end="")
         print()
