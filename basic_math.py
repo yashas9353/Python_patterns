@@ -21,5 +21,21 @@ def reverse_digit(N:int)-> None:
 
     return reverse
 
-print(reverse_digit(15))
+
+def isArmstrong(num):
+    res = 0
+    original_num = num
+    num_len = len(str(original_num))
+
+    while num>0:
+        rem = num%10
+        res = res + int(pow(rem,num_len))
+        num = num//10
+
+    if res == original_num:
+        return "YES"
+    else:
+        return "NO"
+    
+
 
