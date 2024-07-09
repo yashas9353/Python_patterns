@@ -39,3 +39,8 @@ def isArmstrong(num):
     
 
 
+str = "My name is Yashas"
+
+str = str.lower().replace(" ","")
+
+print(str)
