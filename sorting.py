@@ -25,5 +25,13 @@ class Solution:
                     arr[j] = arr[j+1]
                     arr[j+1] = temp
 
+def insertion_sort(arr,n):
+    for i in range(n):
+        j=i
+        while j>0 and arr[j-1]>arr[j]:
+            arr[j],arr[j-1] = arr[j-1],arr[j]
+            j -= 1
+    return arr
 
-
+li = [2,6,3,1,15,1,10]
+print(insertion_sort(li,len(li)))
