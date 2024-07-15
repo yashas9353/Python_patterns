@@ -39,8 +39,10 @@ def isArmstrong(num):
     
 
 
-str = "My name is Yashas"
+# str = "My name is Yashas"
 
-str = str.lower().replace(" ","")
+# str = str.lower().replace(" ","")
 
-print(str)
+# print(str)
+
+print(type(reverse_digit(1892)))
