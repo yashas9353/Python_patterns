@@ -45,4 +45,9 @@ def isArmstrong(num):
 
 # print(str)
 
-print(type(reverse_digit(1892)))
+# print(type(reverse_digit(1892)))
+
+
+arr = [-2,2,3,4,-5]
+
+print(sorted(arr))
